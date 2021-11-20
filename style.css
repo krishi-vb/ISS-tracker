@@ -1,0 +1,100 @@
+html{
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+    color: black;
+}
+
+body{
+    max-width: 100%;
+    min-height: 100vh;
+    overscroll-behavior-y: none;
+    
+}
+
+#heading{
+    
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 30px;
+}
+
+#data{
+    position: relative;
+    top: 100px;
+    text-align: center;
+}
+
+#table{
+    position: relative;
+    top: 50px;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: grey;
+    color: white;
+    text-align: center;
+    height: 50px;
+}
+
+.footText{
+    height: auto;
+    margin: 0 auto;
+    padding: 10px;
+    position: relative;
+}
+
+#footerdiv{
+    width: 100%;
+    text-align: center;
+}
+
+.social{
+    display: inline-block;
+    margin: 0 auto;
+    padding: 3px;
+}
+
+#links{
+    display: flex;
+}
+
+@media screen and (min-width: 1200px) {
+    #heading {
+      font-size: 32px;
+    }
+}
+
+@media screen and (min-width: 1001px) {
+    #heading {
+      font-size: 32px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    #heading {
+      font-size: 28px;
+    }
+}
+  
+@media screen and (max-width: 700px) {
+    #heading {
+    font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    #heading {
+    font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 250px) {
+    #heading {
+    font-size: 16px;
+    }
+}
