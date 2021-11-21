@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cantarell&display=swap');
+
 html{
     font-size: 16px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
@@ -6,9 +8,6 @@ html{
 
 body{
     max-width: 100%;
-    min-height: 100vh;
-    overscroll-behavior-y: none;
-    
 }
 
 #heading{
@@ -25,21 +24,25 @@ body{
     text-align: center;
 }
 
-#table{
-    position: relative;
-    top: 50px;
+#tableData{
+    font-size: 16px;
 }
 
-.footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: grey;
-    color: white;
-    text-align: center;
-    height: 50px;
+@media screen and (max-width: 678px){
+    #tableData{
+        font-size: 14px;
+    }
 }
+
+#footer {
+    background: rgba(0, 0, 0, 0.913);
+    
+    padding: 20px 0px;
+    color: #999;
+    /* position: absolute;
+    bottom: 0; */
+    
+  }
 
 .footText{
     height: auto;
@@ -48,20 +51,87 @@ body{
     position: relative;
 }
 
-#footerdiv{
-    width: 100%;
-    text-align: center;
+#footerContainer{
+    
+    position: fixed; 
+    bottom: 0px;
+    
+}
+
+@media screen and (max-width: 767px){
+
+    #footerContainer{
+        position: absolute; 
+        top: 900px;
+    }
+}  
+
+#footerContent{
+    display: flex; 
+    justify-content: center; 
+}
+
+#introduction{
+    white-space: pre-line;
+    text-align: end;
+    width: 400px;
+    padding-left: 80px;
+    box-sizing: border-box;
+    color: #ffff00d7;
+    font-family: 'Cantarell', sans-serif;
+    font-size: 16px;
 }
 
 .social{
-    display: inline-block;
-    margin: 0 auto;
-    padding: 3px;
+    padding-right: 80px;
+    width: 400px;
 }
 
 #links{
     display: flex;
 }
+
+@media screen and (max-width: 576px){
+
+    #footerContent{
+        display: flex;
+        flex-wrap: wrap;
+    
+        
+     
+    }
+
+    #introduction{
+        
+        white-space: normal;
+        text-align: center;
+        width: 70vw;
+        color: white;
+        font-family: 'Bree Serif', serif;
+        font-size: 14px;
+    
+        padding-left: 0px;
+        box-sizing: border-box;
+        
+    }
+    
+    .social{
+        padding-right: 0px;
+        padding-top: 10px;
+        width: 60vw;
+        box-sizing: border-box;
+        justify-items: center;
+    }
+
+    #links{
+        display: flex;
+        justify-content: center;
+    }
+}  
+
+
+
+
 
 @media screen and (min-width: 1200px) {
     #heading {
@@ -71,25 +141,25 @@ body{
 
 @media screen and (min-width: 1001px) {
     #heading {
-      font-size: 32px;
+      font-size: 28px;
     }
 }
 
 @media screen and (max-width: 1000px) {
     #heading {
-      font-size: 28px;
+      font-size: 22px;
     }
 }
   
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 573px) {
     #heading {
-    font-size: 25px;
+    font-size: 20px;
     }
 }
 
 @media screen and (max-width: 350px) {
     #heading {
-    font-size: 20px;
+    font-size: 18px;
     }
 }
 
@@ -124,4 +194,16 @@ body{
 
 #map{ 
     height: 500px; 
+}
+
+@media screen and (max-width: 576px) {
+    #map{ 
+        height: 300px; 
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #map{ 
+        height: 400px; 
+    }
 }

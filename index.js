@@ -30,6 +30,8 @@ const marker = L.marker([0, 0], { icon: issIcon}).addTo(mymap);
 
 var api_url = 'https://api.wheretheiss.at/v1/satellites/25544';
 
+let firstTime = true;
+
 async function fetchLocation(){
     
     var data = await fetch(api_url);
@@ -40,17 +42,20 @@ async function fetchLocation(){
 
     
     marker.setLatLng([latitude, longitude]);
-    mymap.setView([latitude, longitude],3);
     
+    if(firstTime){
+    mymap.setView([latitude, longitude],3);
+    firstTime = false;
+    }
 
-    document.getElementById("lat").innerHTML = latitude.toFixed(6);    
-    document.getElementById("long").innerHTML = longitude.toFixed(6);
+    document.getElementById("lat").innerHTML = `${latitude.toFixed(6)}°`;    
+    document.getElementById("long").innerHTML = `${longitude.toFixed(6)}°`;
     document.getElementById("timeofday").innerHTML = `${visibility} area`;
     document.getElementById("altitude").innerHTML = `${Math.round(altitude)} km`;
     document.getElementById("velocity").innerHTML = `${Math.round(velocity)} km/h`;
 };
 
-setInterval(fetchLocation, 2500);
+setInterval(fetchLocation, 2000);
 
 
 
