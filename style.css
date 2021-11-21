@@ -85,6 +85,8 @@ body{
 .social{
     padding-right: 80px;
     width: 400px;
+    display: flex;
+    align-items: center;
 }
 
 #links{
@@ -95,10 +97,7 @@ body{
 
     #footerContent{
         display: flex;
-        flex-wrap: wrap;
-    
-        
-     
+        flex-wrap: wrap;    
     }
 
     #introduction{
@@ -106,13 +105,12 @@ body{
         white-space: normal;
         text-align: center;
         width: 70vw;
-        color: white;
-        font-family: 'Bree Serif', serif;
+        color: #ffff00d7;
+        font-family: 'Cantarell', sans-serif;
         font-size: 14px;
     
         padding-left: 0px;
         box-sizing: border-box;
-        
     }
     
     .social{
@@ -121,6 +119,8 @@ body{
         width: 60vw;
         box-sizing: border-box;
         justify-items: center;
+
+        display: block;
     }
 
     #links{
